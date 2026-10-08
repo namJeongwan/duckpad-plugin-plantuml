@@ -14,7 +14,7 @@ MODULES=()
 for ARCH in "${ARCHES[@]}"; do
   mkdir -p "build/$ARCH"
   swiftc -swift-version 6 -target "$ARCH-apple-macosx13.0" -module-cache-path "$PWD/build/module-cache" \
-    -O -emit-library -module-name DuckpadPlantUML_0_1_0 -I "$SDK/include" \
+    -O -emit-library -module-name DuckpadPlantUML_0_1_1 -I "$SDK/include" \
     "$SDK/Swift/DuckpadHost.swift" "$ROOT/SDK/DuckpadRuntime/NativeInstallerXPCProtocol.swift" \
     "$ROOT/SDK/DuckpadRuntime/PlantUMLRequest.swift" Sources/*.swift \
     -framework AppKit -framework Security -o "build/$ARCH/module.dylib"
