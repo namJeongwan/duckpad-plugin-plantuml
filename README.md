@@ -28,6 +28,7 @@ outputs in the repository.
 
 ```sh
 bash scripts/test-native.sh
+python3 -m unittest discover -s Tests -p 'test_*.py'
 bash scripts/build.sh universal
 swift scripts/sign.swift dist/com.duckpad.plantuml.duckpad-plugin
 ```
@@ -44,7 +45,7 @@ cancellation, errors and process-group cleanup.
 ## Release order
 
 1. Review and tag this repository, build both architectures, sign and verify the package.
-2. Publish `Duckpad-PlantUML-0.1.0-universal.zip` with its SHA-256 checksum.
+2. Publish `Duckpad-PlantUML-0.1.1-universal.zip` with its SHA-256 checksum.
 3. Update `namJeongwan/duckpad-plugins` using the published URL, digest and publisher key.
 4. Publish the compatible Duckpad host release.
 
