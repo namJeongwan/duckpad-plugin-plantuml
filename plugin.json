@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "com.duckpad.plantuml",
+  "name": "PlantUML",
+  "version": {
+    "major": 0,
+    "minor": 1,
+    "patch": 0
+  },
+  "api": {
+    "minimum": {
+      "major": 1,
+      "minor": 4,
+      "patch": 0
+    },
+    "maximumExclusive": {
+      "major": 2,
+      "minor": 0,
+      "patch": 0
+    }
+  },
+  "publisher": {
+    "id": "com.duckpad",
+    "keyID": "clipboard-release-1"
+  },
+  "runtime": {
+    "kind": "native",
+    "module": "module.dylib",
+    "abi": "duckpad-native-1"
+  },
+  "capabilities": [
+    {
+      "id": "documents.read",
+      "scope": "application"
+    },
+    {
+      "id": "storage.plugin",
+      "scope": "application"
+    },
+    {
+      "id": "ui.list",
+      "scope": "application"
+    },
+    {
+      "id": "runtime.native",
+      "scope": "application"
+    }
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "id": "com.duckpad.plantuml.preview",
+        "title": "PlantUML",
+        "operation": 1,
+        "inputScope": "service"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "com.duckpad.plantuml.preview",
+        "key": "cmd+option+u"
+      }
+    ],
+    "snippets": [],
+    "themes": [],
+    "languages": []
+  }
+}
